@@ -1,5 +1,6 @@
 import { supplementTemplate } from "./supplementTemplate.js";
 import {supplementTakenTemplate} from "./supplementTakenTemplate.js";
+import supplementTaken from "./supplementTaken.js";
 
 let _router = undefined;
 let _renderer = undefined;
@@ -19,8 +20,8 @@ function submitHandler(event, supplementType) {
     console.log(unit);
     
     if(!window.localStorage.getItem(supplementType)){
-        let doseObj =  {"value": value, "unit": unit};
-        window.localStorage.setItem(supplementType, JSON.stringify(doseObj));
+        let doseObj =  {name:supplementType, value: value, unit: unit};
+        window.localStorage.setItem(supplementType,JSON.stringify(doseObj));
         console.log(window.localStorage.getItem(supplementType))
     }
     // else{
@@ -28,11 +29,11 @@ function submitHandler(event, supplementType) {
     //     let newValue = Number(previousValue) + Number(value);
     //     window.localStorage.setItem(supplementType, newValue);
     // }
-    
+    supplementTaken.getView();
 
 }
 
-function getView() {
+async function getView(context, next) {
     let model = { 
         submitHandler,
         locStorage,
@@ -40,6 +41,7 @@ function getView() {
     };
     let resultTemplate = supplementTemplate(model);
     _renderer(resultTemplate);
+   next();
 }
 
 export default {
