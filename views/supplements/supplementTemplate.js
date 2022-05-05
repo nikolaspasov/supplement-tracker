@@ -30,6 +30,11 @@ export let supplementTemplate = (model) => html`
             <button class="supplement-button" type="button" name='omega-3'>Omega-3</button>
             <button class="supplement-button" type="button" name='tribulus'>Tribulus Terrestris</button>
             <button class="supplement-button" type="button" name='melatonin'>Melatonin</button>
+            <button class="supplement-button" type="button" name='ginkgo'>Ginkgo Biloba</button>
+            <button class="supplement-button" type="button" name='copper'>Copper</button>
+            <button class="supplement-button" type="button" name='creatine'>Creatine</button>
+            <button class="supplement-button" type="button" name='boron'>Boron</button>
+            <button class="supplement-button" type="button" name='vitamin-b12'>Vitamin B12</button>
         </div>
 
         <input type="number" name="value" class="supplement-value-input-box">
@@ -39,6 +44,7 @@ export let supplementTemplate = (model) => html`
             <option value="g">g</option>
             <option value="mcg">mcg</option>
             <option value="IU">IU</option>
+            <option value="ml">ml</option>
         </select>
         <button class="add-button" type="submit" >
             ADD
