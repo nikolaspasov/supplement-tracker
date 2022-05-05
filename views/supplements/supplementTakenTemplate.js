@@ -21,7 +21,7 @@ let entryTemplate = (obj, model) => html`
         <td>
             ${obj.unit}
             <button id="delete-btn" class="delete-btn" @click=${(e) => model.deleteIntake(e)}>
-                DEL
+                X
             </button>
         </td>
     
