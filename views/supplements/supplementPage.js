@@ -24,7 +24,7 @@ function submitHandler(event, supplementKey, supplementName) {
        
        let errorMessages = [];
 
-       if(supplementKey.trim()===''){
+       if(!supplementName){
            errorMessages.push('Supplement is required')
        }
        if(value.trim()===''){
@@ -49,9 +49,10 @@ function submitHandler(event, supplementKey, supplementName) {
             window.localStorage.setItem(supplementKey,JSON.stringify(supplementEntry));
         }
         supplementTaken.getView();
+        
 
     } catch (error) {
-        
+        alert(error);
     }
     
     
