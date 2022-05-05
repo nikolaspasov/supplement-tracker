@@ -38,7 +38,7 @@ header{
     margin-bottom: 0.1rem;
 }
 
-.supplement-btns button:hover{
+.supplement-btns button:hover, .supplement-btns .clicked{
     background-color: black;
     color: white;
 }

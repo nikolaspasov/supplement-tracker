@@ -1,4 +1,4 @@
-import { html } from '../../node_modules/lit-html/lit-html.js';
+import { html, nothing } from '../../node_modules/lit-html/lit-html.js';
 import { supplementTakenTemplate } from './supplementTakenTemplate.js';
 
 let supplementType;
@@ -20,8 +20,14 @@ export let supplementTemplate = (model) => html`
         if (e.target.nodeName !== 'BUTTON') {
         return;
         }
+        document.querySelector('.clicked')
+            ? document.querySelector('.clicked').classList.remove('clicked')
+            : nothing;
+        
+        e.target.classList = 'clicked'
         supplementType = e.target.textContent;
         supplementKey = e.target.name;
+        
         }}>
             <button class="supplement-button" type="button" name='zinc'>Zinc</button>
             <button class="supplement-button" type="button" name='vitamin-d'>Vitamin D3</button>
