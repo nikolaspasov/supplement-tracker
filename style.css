@@ -56,6 +56,7 @@ form input, form select, form button.add-button{
 ul{
     padding-top: 12rem;
 }
+
 ul li, p {
     display:flex;
     font-size: 1.3rem;
@@ -63,13 +64,40 @@ ul li, p {
     margin: 0.5rem;
     padding-top: 0.5rem;
     background: white;
-    width: 50%;
+    
     justify-content:space-between;
     align-items: center;
 }
+
 ul li span{
   
     justify-items: right;
 }
+tr th span{
+  
+    justify-items: right;
+}
+
+table{
+    padding-top: 7rem;
+    padding-left: 2rem;
+    padding-bottom: 3rem;
+    width: 65%;
+}
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    background: rgb(214, 209, 209);
+    width: 25%;
+  }
+  #amount  {
+      text-align: right;
+  }
+  #delete-btn{
+      float:right
+  }
+  
+  
 
 

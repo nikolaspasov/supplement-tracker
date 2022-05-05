@@ -11,7 +11,8 @@ function initialize(routerer, renderer) {
 }
 
 function deleteIntake(e) {
-    localStorage.removeItem(e.currentTarget.parentNode.id);
+   console.log('nikieee');
+    localStorage.removeItem(e.currentTarget.parentNode.parentNode.id);
     getView();
 }
 
