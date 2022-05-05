@@ -17,9 +17,10 @@ let entryTemplate = (obj,model) => html`
         ${obj.name} 
             <span>
                 ${obj.value}
+                ${obj.unit}
             </span>
 
-            ${obj.unit}
+            
 
         <button class="delete-btn" @click=${(e)=> model.deleteIntake(e)}>
             DEL
