@@ -56,7 +56,7 @@ form input, form select, form button.add-button{
 ul{
     padding-top: 12rem;
 }
-ul li {
+ul li, p {
     display:flex;
     font-size: 2rem;
     text-align: left;
