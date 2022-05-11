@@ -57,7 +57,7 @@ ul{
     padding-top: 12rem;
 }
 
-ul li, p {
+ul li {
     display:flex;
     font-size: 1.3rem;
     text-align: left;
