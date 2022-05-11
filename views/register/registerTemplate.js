@@ -13,7 +13,7 @@ export let registerTemplate = (model) => html `
 
         <p>Password</p>
         <input type="password" placeholder="Enter Password" name="password">
-        <p>RepeatPassword</p>
+        <p>Repeat Password</p>
         <input type="password" placeholder="Enter Password" name="repeat-password">
 
         <input type="submit" class="registerbtn" value="Register">

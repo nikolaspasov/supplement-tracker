@@ -7,8 +7,7 @@ export let loginTemplate = (model) => html`
 
     <form @submit=${(e)=> model.submitHandler(e)} id="login-form" action="#" method="post">
         <h1>Login</h1>
-        <p>Please enter your credentials.</p>
-        <hr>
+        
 
         <p>Username</p>
         <input placeholder="Enter Username" name="username" type="text">
