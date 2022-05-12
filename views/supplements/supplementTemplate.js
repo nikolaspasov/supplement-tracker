@@ -10,6 +10,8 @@ let supplementKey;
 
 
 export let supplementTemplate = (model) => html`
+
+
 <div class="supplement-btns">
     <form id="supplement-input" @submit=${function(e){
         model.submitHandler(e, supplementKey, supplementType);
@@ -61,8 +63,9 @@ export let supplementTemplate = (model) => html`
 
     <span>
        
-
+        
     </span >
+    
 </div >
     `;
 // ${model.locStorage.length > 0

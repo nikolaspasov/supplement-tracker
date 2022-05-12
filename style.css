@@ -97,6 +97,11 @@ td, th {
   #delete-btn{
       float:right
   }
+  #logout-btn{
+      position: fixed;
+      top: 0;
+      right: 0;
+  }
   
   
 

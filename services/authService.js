@@ -5,6 +5,7 @@ async function login(user){
     console.log(user);
     let result = await request(); 
     
+
     async function request(){
         if(user!== undefined){
 
@@ -21,10 +22,13 @@ async function login(user){
             let response = await fetch(`${baseUrl}users/login`, options);
             if(!response.ok){
                 let message = await response.text();
-                throw new Error(`${message} ohhh noooooo`)
+                throw new Error(`Username or password don't match!`)
                 
             }
             let fetchedResponse = await response.json();
+            sessionStorage.clear();
+            sessionStorage.setItem(fetchedResponse.username, fetchedResponse.accessToken);
+            console.log(sessionStorage);
             return fetchedResponse;
 
         }
@@ -58,6 +62,9 @@ async function register(user){
                 
             }
             let fetchedResponse = await response.json();
+            sessionStorage.clear();
+            sessionStorage.setItem(fetchedResponse.username, fetchedResponse.accessToken);
+            console.log(sessionStorage);
             return fetchedResponse;
 
         }

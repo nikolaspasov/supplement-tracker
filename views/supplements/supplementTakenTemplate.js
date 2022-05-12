@@ -1,18 +1,32 @@
 import { html } from '../../node_modules/lit-html/lit-html.js';
 
+export let clearTemplate = () => html``;
 
 export let supplementTakenTemplate = (model) => html`
+   
+   <table id="supplements-added-list">
+    
+        <thead>
+            <th>Supplement</th>
+            <th id="amount">Amount</th>
+            <th>Unit</th>
+        </thead>
+        <tbody>
+            ${Object.keys(model.locStorage).length > 0
+                ? Object.keys(model.locStorage).map((key, index) =>
+                entryTemplate((JSON.parse(model.locStorage[key])), model))
 
-<th>Supplement</th>
-          <th id="amount">Amount</th>
-          <th>Unit</th>
-    ${Object.keys(model.locStorage).length > 0
-    ?Object.keys(model.locStorage).map((key, index) =>
-        entryTemplate((JSON.parse(model.locStorage[key])), model))
+                : html`<tr>No supplements taken.</tr>`
+            }
+        </tbody>
     
-    : html`<tr>No supplements taken.</tr>`
-    }
-    
+    </table>
+
+    <footer>
+
+        <button id="logout-btn" @click = ${model.logout}>logout</button>
+       
+    </footer>
 `;
 
 let entryTemplate = (obj, model) => html`
@@ -23,7 +37,7 @@ let entryTemplate = (obj, model) => html`
         </td>
         <td>
             ${obj.unit}
-            <button id="delete-btn" class="delete-btn" @click=${(e) => model.deleteIntake(e)}>
+            <button id="delete-btn" class="delete-btn" @click=${(e)=> model.deleteIntake(e)}>
                 X
             </button>
         </td>

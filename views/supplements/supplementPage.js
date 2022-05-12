@@ -58,11 +58,12 @@ function submitHandler(event, supplementKey, supplementName) {
     
 }
 
+
+
 function getView(context, next) {
     let model = { 
         submitHandler,
-        locStorage,
-        
+        locStorage
     };
     let resultTemplate = supplementTemplate(model);
     _renderer(resultTemplate);

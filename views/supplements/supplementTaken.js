@@ -1,4 +1,4 @@
-import { supplementTakenTemplate } from "./supplementTakenTemplate.js";
+import { supplementTakenTemplate, clearTemplate } from "./supplementTakenTemplate.js";
 
 let _router = undefined;
 let _renderer = undefined;
@@ -15,6 +15,11 @@ function deleteIntake(e) {
     localStorage.removeItem(e.currentTarget.parentNode.parentNode.id);
     getView();
 }
+function logout(){
+    sessionStorage.clear();
+    _renderer(clearTemplate());
+    _router.redirect('/login')
+}
 
 function getView() {
 
@@ -28,7 +33,8 @@ function getView() {
     let locStorage = (window.localStorage);
     let model = {
         locStorage,
-        deleteIntake
+        deleteIntake,
+        logout
     }
 
 
