@@ -43,6 +43,8 @@ export let supplementTemplate = (model) => html`
             <button class="supplement-button" type="button" name='creatine'>Creatine</button>
             <button class="supplement-button" type="button" name='boron'>Boron</button>
             <button class="supplement-button" type="button" name='vitamin-b12'>Vitamin B12</button>
+            <button class="supplement-button" type="button" name='ashwaganda'>Ashwaganda</button>
+
         </div>
 
         <input type="number" name="value" class="supplement-value-input-box">
