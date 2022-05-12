@@ -14,7 +14,7 @@ export let loginTemplate = (model) => html`
 
         <p>Password</p>
         <input type="password" placeholder="Enter Password" name="password">
-        <input type="submit" class="registerbtn" value="Login">
+        <button class="registerbtn" >Login</button>
     </form>
     <div class="signin">
         <p>Dont have an account?

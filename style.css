@@ -38,7 +38,8 @@ header{
     margin-bottom: 0.2rem;
 }
 
-.supplement-btns button:hover, .supplement-btns .clicked{
+
+button:hover, .clicked{
     background-color: black;
     color: white;
 }
@@ -82,14 +83,14 @@ table{
     padding-top: 7rem;
     padding-left: 2rem;
     padding-bottom: 3rem;
-    width: 55%;
+    width: 50%;
 }
 td, th {
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
     background: rgb(214, 209, 209);
-    width: 25%;
+    width: 20%;
   }
   #amount  {
       text-align: right;

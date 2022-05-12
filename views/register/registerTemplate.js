@@ -16,7 +16,7 @@ export let registerTemplate = (model) => html `
         <p>Repeat Password</p>
         <input type="password" placeholder="Enter Password" name="repeat-password">
 
-        <input type="submit" class="registerbtn" value="Register">
+        <button class="registerbtn" >Register</button>
     </form>
     <div class="login">
         <p>Already have an account?
